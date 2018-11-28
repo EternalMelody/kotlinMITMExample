@@ -39,7 +39,7 @@ class ClientView: View() {
         val connectPort = if (targetAddress == HIJACK_ADDRESS) PROXY_PORT else targetPort
 
         val header = Header(
-            InetSocketAddress(InetAddress.getLocalHost().getHostAddress(), connectPort),
+            InetSocketAddress(InetAddress.getLocalHost().hostAddress, connectPort),
             InetSocketAddress(targetAddress, targetPort)
         )
         val message = Message(header, textField.text)

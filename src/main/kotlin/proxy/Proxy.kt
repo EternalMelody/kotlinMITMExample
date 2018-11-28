@@ -44,7 +44,7 @@ fun main(args: Array<String>) {
                         messageToServerBody
                     )
 
-                    println("Sending ${messageToServer}")
+                    println("Sending $messageToServer")
 
                     val messageFromServer = Socket(serverAddress.hostName, serverAddress.port).use socketToServer@ {
                         ObjectOutputStream(it.getOutputStream()).use{ stsoos ->

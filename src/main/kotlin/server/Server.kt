@@ -21,10 +21,10 @@ fun main(args: Array<String>) {
 
                     val message = Message(
                         Header(
-                            InetSocketAddress(InetAddress.getLocalHost().getHostAddress(), socket.localPort),
+                            InetSocketAddress(InetAddress.getLocalHost().hostAddress, socket.localPort),
                             InetSocketAddress(targetAddress, socket.port)
                         ),
-                        "Received this message: ${recMessage.body}"
+                        "The server received your message: ${recMessage.body}"
                     )
                     ObjectOutputStream(socket.getOutputStream()).use {
                         it.writeObject(message)
