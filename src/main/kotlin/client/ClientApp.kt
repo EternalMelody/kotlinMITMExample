@@ -1,7 +1,7 @@
-package client.app
+package client
 
-import tornadofx.*
-import client.view.ClientView
+import tornadofx.App
+import tornadofx.launch
 
 class ClientApp: App(ClientView::class)
 
